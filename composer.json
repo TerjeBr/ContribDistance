@@ -1,0 +1,23 @@
+{
+    "name": "TerjeBr/ContribDistance",
+    "description": "Contributor Distance",
+    "type": "project",
+    "require-dev": {
+        "behat/behat": "^3.1",
+        "phpspec/phpspec": "^2.5",
+        "bossa/phpspec2-expect": "^1.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {"": "src"}
+    },
+    "license": "none",
+    "authors": [
+        {
+            "name": "Terje Bråten",
+            "email": "terje@brate.be"
+        }
+    ]
+}
