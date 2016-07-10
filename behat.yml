@@ -1,0 +1,27 @@
+default:
+    suites:
+        integration:
+            paths:
+                - %paths.base%/features
+            contexts:
+                - FeatureContext
+                - Behat\MinkExtension\Context\MinkContext
+                - WiremockContext
+                - behatch:json:
+                    evaluationMode: javascript
+                - behatch:rest
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: app/autoload.php
+                path: app/AppKernel.php
+                class: AppKernel
+                env: test
+                debug: false
+        Behat\MinkExtension:
+            files_path: %paths.base%
+            base_url:  'http://localhost:8080'
+            sessions:
+                default:
+                    goutte: ~
+        Sanpi\Behatch\Extension: ~

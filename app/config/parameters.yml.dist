@@ -1,11 +1,8 @@
 parameters:
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     symfony
-    database_user:     root
-    database_password: ~
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
+    database_path:     "%kernel.root_dir%/data.db3"
+    database_name:     github_data
+    database_user:     application
+    database_password: 84nsxp1k3
 
     # A secret key that's used to generate certain security-related tokens
     secret:            03fnsdf24sdr2cmeiwn314am21

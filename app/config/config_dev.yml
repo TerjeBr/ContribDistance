@@ -3,7 +3,6 @@ imports:
 
 framework:
     router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
         strict_requirements: true
 
 monolog:
@@ -11,7 +10,14 @@ monolog:
         main:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
+            level: notice
             channels: [!event]
-        console:
-            type: console
+        detailed:
+           type: stream
+           path: "%kernel.logs_dir%/%kernel.environment%_debug.log"
+           level: debug
+           channels: [!event]
+        event:
+           type: stream
+           path: "%kernel.logs_dir%/%kernel.environment%_debug_event.log"
+           level: debug
